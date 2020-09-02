@@ -34,7 +34,16 @@
 	scanf("%d", &b);
 	
 	printf("Digite C: ");
-	scanf("%d", &c);	
+	scanf("%d", &c);
+	
+		for(int i = b; b <= c; i++){
+			if(i%a == 0){
+				printf("%d \n", i);
+			}
+			if(i == c){
+				break;
+			}
+		}
 }
 
 
