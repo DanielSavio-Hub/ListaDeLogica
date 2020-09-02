@@ -19,6 +19,7 @@
 	
 	Verify checkA;
 	int a, b, c;
+	int acumulador = 0;
 	
 	printf("Neste prgrama você irá inserir 3 números onde:\nA= um número maior que um\nB= um número qualquer\nC= um número qulquer.");
 	printf("Será mostrado todos os numeros entre B e C divisiveis por A\n ===================================================\n");
@@ -36,21 +37,26 @@
 	scanf("%d", &c);
 	
 	if(b < c){
+		
 		for(int i = b; b <= c; i++){
 			if(i%a == 0){
 				printf("%d \n", i);
+				acumulador+= i;
 			}
 			if(i == c){
+				printf("a soma de todos os números multiplos de %d é : %d", a, acumulador);
 				break; // esse comando força o encerramento do laço
 			}
 		}
 	}
 	else{
-		for(int i = b; b >= c; i--){
+		for(int i = b; b >= c; i--){ // para caso de c for menor que b
 			if(i%a == 0){
 				printf("%d \n", i);
+				acumulador+= i;
 			}
 			if(i == c){
+				printf("a soma de todos os números multiplos de %d é : %d", a, acumulador);
 				break; // esse comando força o encerramento do laço
 			}
 		}
