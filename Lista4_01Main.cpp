@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <locale.h>
 
-	class Verify{
-		
+	class Verify{		
 		public: verificaA(int a){
 			if(a<1){
 				printf("a não pode ser menor que 1, por favor tente novamente");
@@ -36,14 +35,28 @@
 	printf("Digite C: ");
 	scanf("%d", &c);
 	
+	if(b < c){
 		for(int i = b; b <= c; i++){
 			if(i%a == 0){
 				printf("%d \n", i);
 			}
 			if(i == c){
-				break;
+				break; // esse comando força o encerramento do laço
 			}
 		}
+	}
+	else{
+		for(int i = b; b >= c; i--){
+			if(i%a == 0){
+				printf("%d \n", i);
+			}
+			if(i == c){
+				break; // esse comando força o encerramento do laço
+			}
+		}
+		
+	}	
+		
 }
 
 
